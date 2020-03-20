@@ -1,2 +1,2 @@
-export Errors from './errors';
-export NewInput from './input';
+export {default as Errors } from './errors';
+export {default as NewInput }  from './input';

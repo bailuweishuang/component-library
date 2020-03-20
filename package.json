@@ -1,6 +1,6 @@
 {
   "name": "component-library-hyx",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "react基础项目",
   "main": "dist/index.js",
   "scripts": {

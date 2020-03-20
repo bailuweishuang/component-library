@@ -1,2 +1,2 @@
 export Errors from './errors';
-export Input from './input';
+export NewInput from './input';

@@ -4,25 +4,25 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
-  //入口文件
+  // 入口文件
   entry: './src/index.js',
-  //出口文件
+  // 出口文件
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  // externals: {
-  //   react: "React",
-  //   "react-dom": "ReactDOM",
-  //   "react-redux": "ReactRedux",
-  //   "react-router": "ReactRouter",
-  //   "react-router-dom": "ReactRouterDOM",
-  //   redux: "Redux",
-  //   antd: "antd",
-  //   'redux-thunk': "ReduxThunk",
-  //   axios: "axios",
-  //   qs: "Qs",
-  // },
+  externals: {
+    react: "React",
+    "react-dom": "ReactDOM",
+    "react-redux": "ReactRedux",
+    "react-router": "ReactRouter",
+    "react-router-dom": "ReactRouterDOM",
+    redux: "Redux",
+    antd: "antd",
+    'redux-thunk': "ReduxThunk",
+    axios: "axios",
+    qs: "Qs",
+  },
   resolve: {
     extensions: ['.js', '.css', '.json', '.jsx', '.scss'],
     alias: {

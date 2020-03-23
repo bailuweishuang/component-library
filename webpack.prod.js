@@ -3,7 +3,7 @@ const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const common = require('./webpack.common.js');
-const basePath = './src/components';
+const basePath = 'src/components';
 const fs = require('fs');
 const resolve = dir => path.resolve(__dirname, dir);
 //  获取入口
@@ -33,10 +33,11 @@ const getEntry = (componentsPath) => {
 };
 console.log(getEntry(basePath));
 module.exports = merge(common, {
-  entry: getEntry(basePath),
+  mode: 'production',
+  entry: {...getEntry(basePath)},
   output: {
     path: path.join(__dirname, 'lib'),
-    filename: 'index.js',
+    filename: '[name].js',
     libraryTarget: 'umd', //发布组件专用
     library: 'componentLibrary',
   },

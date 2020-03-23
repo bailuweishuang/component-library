@@ -31,7 +31,6 @@ const getEntry = (componentsPath) => {
   getFiles(componentsDir, componentsPath);
   return files;
 };
-console.log(getEntry(basePath));
 module.exports = merge(common, {
   mode: 'production',
   entry: {...getEntry(basePath)},

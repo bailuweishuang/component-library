@@ -3,6 +3,7 @@
   "version": "1.0.5",
   "description": "react基础项目",
   "main": "lib/index.js",
+  "module": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --config webpack.dev.js",
@@ -13,7 +14,7 @@
     "url": "git+https://github.com/bailuweishuang/basis-project.git"
   },
   "files": [
-    "dist"
+    "lib"
   ],
   "keywords": [],
   "author": "",

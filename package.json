@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/bailuweishuang/basis-project.git"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",

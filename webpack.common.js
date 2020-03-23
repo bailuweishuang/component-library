@@ -11,7 +11,8 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd',
-    library: 'componentLibrary'
+    library: 'componentLibrary',
+    libraryExport: 'default'
   },
   // externals: {
   //   react: "React",

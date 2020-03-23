@@ -2,7 +2,7 @@
   "name": "component-library-hyx",
   "version": "1.0.4",
   "description": "react基础项目",
-  "main": "dist/main.bundle.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --config webpack.dev.js",

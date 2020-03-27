@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bailuweishuang/basis-project.git"
+    "url": "git+https://github.com/bailuweishuang/component-library.git"
   },
   "files": [
     "lib"
@@ -20,9 +20,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bailuweishuang/basis-project/issues"
+    "url": "https://github.com/bailuweishuang/component-library/issues"
   },
-  "homepage": "https://github.com/bailuweishuang/basis-project#readme",
+  "homepage": "https://github.com/bailuweishuang/component-library#readme",
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/plugin-proposal-export-default-from": "^7.8.3",

@@ -36,7 +36,7 @@ module.exports = merge(common, {
   entry: {...getEntry(basePath)},
   output: {
     path: path.join(__dirname, 'lib'),
-    filename: '[name].js',
+    filename: '[name]-[chunkhash].js',
     libraryTarget: 'umd', //发布组件专用
     library: 'componentLibrary',
   },

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from 'antd';
-import { NewInput } from '@/components';
+import { NewInput, Tabs } from '@/components';
 
 function Example() {
   const [count, setCount] = useState(0);
@@ -8,6 +8,7 @@ function Example() {
     <div>
       <p>You clicked {count} times</p>
       <NewInput></NewInput>
+      <Tabs></Tabs>
       <Button type="primary" onClick={() => setCount(count + 1)}>
         Click me
       </Button>

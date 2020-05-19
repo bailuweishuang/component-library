@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
+var HtmlWebPackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
@@ -10,6 +10,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: 'http://baidu/com/'
   },
   externals: {
     // react: "React",
@@ -38,14 +39,14 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-          },
-        ],
-      },
+      // {
+      //   test: /\.html$/,
+      //   use: [
+      //     {
+      //       loader: 'html-loader',
+      //     },
+      //   ],
+      // },
       {
         test: /\.s[c|a]ss$/,
         use: ExtractTextPlugin.extract({

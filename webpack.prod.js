@@ -5,7 +5,21 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const common = require('./webpack.common.js');
 const basePath = 'src/components';
 const fs = require('fs');
+var srcDir = path.resolve(process.cwd(), 'src');
 const resolve = dir => path.resolve(__dirname, dir);
+var glob = require('glob');
+var entries= function () {
+    var jsDir = path.resolve(srcDir, 'components')
+    var entryFiles = glob.sync(jsDir + '/*.{js,jsx}')
+    var map = {};
+
+    for (var i = 0; i < entryFiles.length; i++) {
+        var filePath = entryFiles[i];
+        var filename = filePath.substring(filePath.lastIndexOf('\/') + 1, filePath.lastIndexOf('.'));
+        map[filename] = filePath;
+    }
+    return map;
+}
 //  获取入口
 const getEntry = (componentsPath) => {
   const componentsDir = fs.readdirSync(resolve(componentsPath));
@@ -31,12 +45,14 @@ const getEntry = (componentsPath) => {
   getFiles(componentsDir, componentsPath);
   return files;
 };
+console.log(entries, getEntry);
 module.exports = merge(common, {
   mode: 'production',
-  entry: {...getEntry(basePath)},
+   entry: {...getEntry(basePath)},
+  // entry: entries(),
   output: {
     path: path.join(__dirname, 'lib'),
-    filename: '[name]-[chunkhash].js',
+    filename: '[name].js',
     libraryTarget: 'umd', //发布组件专用
     library: 'componentLibrary',
   },
